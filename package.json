@@ -1,0 +1,16 @@
+{
+  "name": "eventify-event-management-system",
+  "version": "1.0.0",
+  "description": "College Event Management System built with Node.js, Express and plain HTML, CSS and JavaScript",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "seed": "node seed.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1"
+  }
+}

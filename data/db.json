@@ -1,0 +1,813 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Rohan Sharma",
+      "email": "organiser@demo.com",
+      "password": "$2a$10$mk2dOoXSXGoYUEvNx5KOUutfSl1EjbElROXEXXIuIQ1/QxV8cw36S",
+      "role": "organiser",
+      "college": "CSE Department",
+      "createdAt": "2026-10-27T04:43:29.044Z"
+    },
+    {
+      "id": 2,
+      "name": "Priya Kapoor",
+      "email": "priya@demo.com",
+      "password": "$2a$10$mk2dOoXSXGoYUEvNx5KOUutfSl1EjbElROXEXXIuIQ1/QxV8cw36S",
+      "role": "organiser",
+      "college": "Cultural Committee",
+      "createdAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 3,
+      "name": "Aarav Mehta",
+      "email": "student@demo.com",
+      "password": "$2a$10$mk2dOoXSXGoYUEvNx5KOUutfSl1EjbElROXEXXIuIQ1/QxV8cw36S",
+      "role": "student",
+      "college": "CSE, 3rd Year",
+      "createdAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 4,
+      "name": "Simran Kaur",
+      "email": "simran@demo.com",
+      "password": "$2a$10$mk2dOoXSXGoYUEvNx5KOUutfSl1EjbElROXEXXIuIQ1/QxV8cw36S",
+      "role": "student",
+      "college": "ECE, 3rd Year",
+      "createdAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 5,
+      "name": "Karan Verma",
+      "email": "karan@demo.com",
+      "password": "$2a$10$mk2dOoXSXGoYUEvNx5KOUutfSl1EjbElROXEXXIuIQ1/QxV8cw36S",
+      "role": "student",
+      "college": "CSE, 2nd Year",
+      "createdAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 6,
+      "name": "Neha Gupta",
+      "email": "neha@demo.com",
+      "password": "$2a$10$mk2dOoXSXGoYUEvNx5KOUutfSl1EjbElROXEXXIuIQ1/QxV8cw36S",
+      "role": "student",
+      "college": "IT, 3rd Year",
+      "createdAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 7,
+      "name": "Rahul Singh",
+      "email": "rahul@demo.com",
+      "password": "$2a$10$mk2dOoXSXGoYUEvNx5KOUutfSl1EjbElROXEXXIuIQ1/QxV8cw36S",
+      "role": "student",
+      "college": "ME, 4th Year",
+      "createdAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 8,
+      "name": "Ishita Jain",
+      "email": "ishita@demo.com",
+      "password": "$2a$10$mk2dOoXSXGoYUEvNx5KOUutfSl1EjbElROXEXXIuIQ1/QxV8cw36S",
+      "role": "student",
+      "college": "CSE, 3rd Year",
+      "createdAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 9,
+      "name": "Manpreet Singh",
+      "email": "manpreet@demo.com",
+      "password": "$2a$10$mk2dOoXSXGoYUEvNx5KOUutfSl1EjbElROXEXXIuIQ1/QxV8cw36S",
+      "role": "student",
+      "college": "EE, 2nd Year",
+      "createdAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 10,
+      "name": "Ananya Rao",
+      "email": "ananya@demo.com",
+      "password": "$2a$10$mk2dOoXSXGoYUEvNx5KOUutfSl1EjbElROXEXXIuIQ1/QxV8cw36S",
+      "role": "student",
+      "college": "IT, 4th Year",
+      "createdAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 11,
+      "name": "Vikram Malhotra",
+      "email": "vikram@demo.com",
+      "password": "$2a$10$mk2dOoXSXGoYUEvNx5KOUutfSl1EjbElROXEXXIuIQ1/QxV8cw36S",
+      "role": "student",
+      "college": "CE, 3rd Year",
+      "createdAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 12,
+      "name": "Tanya Bansal",
+      "email": "tanya@demo.com",
+      "password": "$2a$10$mk2dOoXSXGoYUEvNx5KOUutfSl1EjbElROXEXXIuIQ1/QxV8cw36S",
+      "role": "student",
+      "college": "CSE, 1st Year",
+      "createdAt": "2026-10-27T04:43:29.045Z"
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "organiserId": 1,
+      "title": "CodeStorm Hackathon 2026",
+      "description": "An 8-hour hackathon where teams build a working prototype around the theme \"Tech for Campus Life\". Mentors from the industry review every project and the best three teams win prizes.",
+      "category": "Hackathon",
+      "date": "2026-10-17",
+      "startTime": "10:00",
+      "endTime": "18:00",
+      "venue": "CS Lab 3, Block B",
+      "price": 200,
+      "capacity": 12,
+      "certTitle": "Certificate of Excellence",
+      "certMessage": "For outstanding innovation and teamwork at CodeStorm.",
+      "signerName": "Dr. Rohan Sharma",
+      "signerRole": "Head, CSE Department",
+      "results": {
+        "first": 3,
+        "second": 4,
+        "third": 5,
+        "note": "Great ideas and clean demos from every team.",
+        "announcedAt": "2026-10-27T04:43:29.045Z"
+      },
+      "createdAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 2,
+      "organiserId": 2,
+      "title": "Inter-College Debate Championship",
+      "description": "Argue your case in front of a panel of judges. This year's motion: \"Social media does more good than harm for students.\"",
+      "category": "Competition",
+      "date": "2026-10-22",
+      "startTime": "11:00",
+      "endTime": "14:00",
+      "venue": "Seminar Hall A",
+      "price": 0,
+      "capacity": 20,
+      "certTitle": "Certificate of Achievement",
+      "certMessage": "For exceptional reasoning and public speaking.",
+      "signerName": "Priya Kapoor",
+      "signerRole": "Cultural Committee Head",
+      "results": {
+        "first": 6,
+        "second": 3,
+        "third": 8,
+        "note": "A close contest. Congratulations to all speakers.",
+        "announcedAt": "2026-10-27T04:43:29.045Z"
+      },
+      "createdAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 3,
+      "organiserId": 1,
+      "title": "Web Dev Workshop: Build with Express",
+      "description": "A hands-on session where you build a small REST API with Node.js and Express from scratch. Bring your laptop with Node.js installed.",
+      "category": "Workshop",
+      "date": "2026-10-25",
+      "startTime": "14:00",
+      "endTime": "16:30",
+      "venue": "CS Lab 1",
+      "price": 0,
+      "capacity": 40,
+      "certTitle": "Certificate of Achievement",
+      "certMessage": "In recognition of outstanding performance and dedication.",
+      "signerName": "Dr. Rohan Sharma",
+      "signerRole": "Head, CSE Department",
+      "results": null,
+      "createdAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 4,
+      "organiserId": 1,
+      "title": "TechFest Robotics Expo",
+      "description": "See line-following robots, drones and student-built automation projects live. Visit the stalls, talk to the makers and vote for the People's Choice robot.",
+      "category": "Technical",
+      "date": "2026-10-30",
+      "startTime": "10:00",
+      "endTime": "17:00",
+      "venue": "Innovation Centre",
+      "price": 0,
+      "capacity": 30,
+      "certTitle": "Certificate of Achievement",
+      "certMessage": "In recognition of outstanding performance and dedication.",
+      "signerName": "Dr. Rohan Sharma",
+      "signerRole": "Head, CSE Department",
+      "results": null,
+      "createdAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 5,
+      "organiserId": 2,
+      "title": "Rang Tarang Cultural Night",
+      "description": "An evening of dance, music and drama performed by students from every department. Food stalls open from 5 PM.",
+      "category": "Cultural",
+      "date": "2026-11-03",
+      "startTime": "18:00",
+      "endTime": "21:30",
+      "venue": "Open Air Theatre",
+      "price": 150,
+      "capacity": 150,
+      "certTitle": "Certificate of Achievement",
+      "certMessage": "In recognition of outstanding performance and dedication.",
+      "signerName": "Priya Kapoor",
+      "signerRole": "Cultural Committee Head",
+      "results": null,
+      "createdAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 6,
+      "organiserId": 1,
+      "title": "Inter-Department Cricket Cup",
+      "description": "Eight departments, one trophy. Register as a player or a supporter and be part of the biggest sports day of the semester.",
+      "category": "Sports",
+      "date": "2026-11-06",
+      "startTime": "09:00",
+      "endTime": "13:00",
+      "venue": "College Cricket Ground",
+      "price": 100,
+      "capacity": 16,
+      "certTitle": "Certificate of Victory",
+      "certMessage": "For sportsmanship, skill and a winning spirit.",
+      "signerName": "Prof. A. K. Gill",
+      "signerRole": "Sports Coordinator",
+      "results": null,
+      "createdAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 7,
+      "organiserId": 1,
+      "title": "AI and Your Career: Industry Talk",
+      "description": "A senior engineer explains how AI is changing software jobs, which skills to build in your final years, and how to prepare for placements.",
+      "category": "Seminar",
+      "date": "2026-11-01",
+      "startTime": "15:00",
+      "endTime": "16:30",
+      "venue": "Auditorium",
+      "price": 0,
+      "capacity": 100,
+      "certTitle": "Certificate of Achievement",
+      "certMessage": "In recognition of outstanding performance and dedication.",
+      "signerName": "Dr. Rohan Sharma",
+      "signerRole": "Head, CSE Department",
+      "results": null,
+      "createdAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 8,
+      "organiserId": 2,
+      "title": "Campus Photography Walk",
+      "description": "Walk around the campus at sunrise and shoot your best three frames. A judge picks the top photographs and prints them for the gallery wall.",
+      "category": "Competition",
+      "date": "2026-11-10",
+      "startTime": "07:00",
+      "endTime": "10:00",
+      "venue": "Central Lawn",
+      "price": 50,
+      "capacity": 25,
+      "certTitle": "Certificate of Creativity",
+      "certMessage": "For an eye for detail and a creative vision.",
+      "signerName": "Priya Kapoor",
+      "signerRole": "Cultural Committee Head",
+      "results": null,
+      "createdAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 9,
+      "organiserId": 2,
+      "title": "Open Mic Night",
+      "description": "Sing, recite, joke or play. Five minutes on stage, an audience that cheers for everyone. Only 10 performer slots are available.",
+      "category": "Social",
+      "date": "2026-10-28",
+      "startTime": "17:30",
+      "endTime": "20:30",
+      "venue": "Student Cafe",
+      "price": 0,
+      "capacity": 10,
+      "certTitle": "Certificate of Achievement",
+      "certMessage": "In recognition of outstanding performance and dedication.",
+      "signerName": "Priya Kapoor",
+      "signerRole": "Cultural Committee Head",
+      "results": null,
+      "createdAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 10,
+      "organiserId": 1,
+      "title": "Startup Pitch Day",
+      "description": "Pitch your idea in 3 minutes to a panel of founders and investors. Get feedback, find co-founders and win seed credits.",
+      "category": "Seminar",
+      "date": "2026-11-16",
+      "startTime": "11:00",
+      "endTime": "15:00",
+      "venue": "Seminar Hall B",
+      "price": 100,
+      "capacity": 60,
+      "certTitle": "Certificate of Merit",
+      "certMessage": "For a promising idea and a confident pitch.",
+      "signerName": "Dr. Rohan Sharma",
+      "signerRole": "Head, CSE Department",
+      "results": null,
+      "createdAt": "2026-10-27T04:43:29.045Z"
+    }
+  ],
+  "registrations": [
+    {
+      "id": 1,
+      "eventId": 1,
+      "studentId": 3,
+      "ticketCode": "EVT1-3HR3B",
+      "status": "registered",
+      "attended": true,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 2,
+      "eventId": 1,
+      "studentId": 4,
+      "ticketCode": "EVT1-PK773",
+      "status": "registered",
+      "attended": true,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 3,
+      "eventId": 1,
+      "studentId": 5,
+      "ticketCode": "EVT1-VJ45T",
+      "status": "registered",
+      "attended": true,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 4,
+      "eventId": 1,
+      "studentId": 6,
+      "ticketCode": "EVT1-KSBR7",
+      "status": "registered",
+      "attended": true,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 5,
+      "eventId": 1,
+      "studentId": 7,
+      "ticketCode": "EVT1-A5SNF",
+      "status": "registered",
+      "attended": true,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 6,
+      "eventId": 1,
+      "studentId": 8,
+      "ticketCode": "EVT1-L2QAK",
+      "status": "registered",
+      "attended": true,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 7,
+      "eventId": 1,
+      "studentId": 9,
+      "ticketCode": "EVT1-YY6EE",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 8,
+      "eventId": 1,
+      "studentId": 10,
+      "ticketCode": "EVT1-UAQ65",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 9,
+      "eventId": 2,
+      "studentId": 3,
+      "ticketCode": "EVT2-ZA2KB",
+      "status": "registered",
+      "attended": true,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 10,
+      "eventId": 2,
+      "studentId": 4,
+      "ticketCode": "EVT2-HWD3F",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 11,
+      "eventId": 2,
+      "studentId": 6,
+      "ticketCode": "EVT2-8F642",
+      "status": "registered",
+      "attended": true,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 12,
+      "eventId": 2,
+      "studentId": 8,
+      "ticketCode": "EVT2-F4AAD",
+      "status": "registered",
+      "attended": true,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 13,
+      "eventId": 2,
+      "studentId": 9,
+      "ticketCode": "EVT2-GNEFH",
+      "status": "registered",
+      "attended": true,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 14,
+      "eventId": 2,
+      "studentId": 11,
+      "ticketCode": "EVT2-7PADL",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 15,
+      "eventId": 3,
+      "studentId": 3,
+      "ticketCode": "EVT3-F9HT9",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 16,
+      "eventId": 3,
+      "studentId": 5,
+      "ticketCode": "EVT3-WPGR8",
+      "status": "registered",
+      "attended": true,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 17,
+      "eventId": 3,
+      "studentId": 7,
+      "ticketCode": "EVT3-66LYH",
+      "status": "registered",
+      "attended": true,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 18,
+      "eventId": 3,
+      "studentId": 9,
+      "ticketCode": "EVT3-VPUGN",
+      "status": "registered",
+      "attended": true,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 19,
+      "eventId": 3,
+      "studentId": 10,
+      "ticketCode": "EVT3-XCB35",
+      "status": "registered",
+      "attended": true,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 20,
+      "eventId": 3,
+      "studentId": 12,
+      "ticketCode": "EVT3-F83ZA",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 21,
+      "eventId": 4,
+      "studentId": 3,
+      "ticketCode": "EVT4-3U9JX",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 22,
+      "eventId": 4,
+      "studentId": 4,
+      "ticketCode": "EVT4-2JAEL",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 23,
+      "eventId": 4,
+      "studentId": 5,
+      "ticketCode": "EVT4-TE6FK",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 24,
+      "eventId": 4,
+      "studentId": 6,
+      "ticketCode": "EVT4-AF2KL",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 25,
+      "eventId": 5,
+      "studentId": 3,
+      "ticketCode": "EVT5-KHVAF",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 26,
+      "eventId": 5,
+      "studentId": 7,
+      "ticketCode": "EVT5-HX62S",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 27,
+      "eventId": 5,
+      "studentId": 8,
+      "ticketCode": "EVT5-32DBA",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 28,
+      "eventId": 6,
+      "studentId": 4,
+      "ticketCode": "EVT6-MNZD6",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 29,
+      "eventId": 6,
+      "studentId": 5,
+      "ticketCode": "EVT6-XH58U",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 30,
+      "eventId": 6,
+      "studentId": 6,
+      "ticketCode": "EVT6-Q65AC",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 31,
+      "eventId": 6,
+      "studentId": 7,
+      "ticketCode": "EVT6-4CEZL",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 32,
+      "eventId": 6,
+      "studentId": 8,
+      "ticketCode": "EVT6-TRUNE",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 33,
+      "eventId": 6,
+      "studentId": 9,
+      "ticketCode": "EVT6-CFT5C",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 34,
+      "eventId": 6,
+      "studentId": 10,
+      "ticketCode": "EVT6-CX6GQ",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 35,
+      "eventId": 6,
+      "studentId": 11,
+      "ticketCode": "EVT6-4FRY5",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 36,
+      "eventId": 6,
+      "studentId": 12,
+      "ticketCode": "EVT6-US9Q9",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 37,
+      "eventId": 7,
+      "studentId": 3,
+      "ticketCode": "EVT7-KUPEF",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 38,
+      "eventId": 7,
+      "studentId": 4,
+      "ticketCode": "EVT7-XTNQV",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 39,
+      "eventId": 7,
+      "studentId": 5,
+      "ticketCode": "EVT7-X3DRV",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 40,
+      "eventId": 7,
+      "studentId": 6,
+      "ticketCode": "EVT7-2UMN6",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 41,
+      "eventId": 7,
+      "studentId": 7,
+      "ticketCode": "EVT7-AK95L",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 42,
+      "eventId": 7,
+      "studentId": 8,
+      "ticketCode": "EVT7-LSAUF",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 43,
+      "eventId": 7,
+      "studentId": 9,
+      "ticketCode": "EVT7-5GUNG",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 44,
+      "eventId": 8,
+      "studentId": 6,
+      "ticketCode": "EVT8-5RS9D",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 45,
+      "eventId": 8,
+      "studentId": 10,
+      "ticketCode": "EVT8-8NWMT",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 46,
+      "eventId": 9,
+      "studentId": 4,
+      "ticketCode": "EVT9-2UEBU",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 47,
+      "eventId": 9,
+      "studentId": 5,
+      "ticketCode": "EVT9-A2AC8",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 48,
+      "eventId": 9,
+      "studentId": 6,
+      "ticketCode": "EVT9-NB27J",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 49,
+      "eventId": 9,
+      "studentId": 7,
+      "ticketCode": "EVT9-5FQDX",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 50,
+      "eventId": 9,
+      "studentId": 8,
+      "ticketCode": "EVT9-H3QLA",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 51,
+      "eventId": 9,
+      "studentId": 9,
+      "ticketCode": "EVT9-W4TRL",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 52,
+      "eventId": 9,
+      "studentId": 10,
+      "ticketCode": "EVT9-43GYP",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 53,
+      "eventId": 9,
+      "studentId": 11,
+      "ticketCode": "EVT9-J4GCB",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 54,
+      "eventId": 10,
+      "studentId": 12,
+      "ticketCode": "EVT10-HSD6H",
+      "status": "registered",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    },
+    {
+      "id": 55,
+      "eventId": 7,
+      "studentId": 12,
+      "ticketCode": "EVT7-3QUAF",
+      "status": "cancelled",
+      "attended": false,
+      "registeredAt": "2026-10-27T04:43:29.045Z"
+    }
+  ]
+}

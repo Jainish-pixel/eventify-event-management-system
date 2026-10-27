@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Log in | Eventify</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main class="auth-wrap">
+  <aside class="auth-art">
+    <div class="auth-art-inner">
+      <h2>Welcome back.</h2>
+      <p>Log in to see your tickets, mark attendance or announce results.</p>
+      <div class="mini-ticket">
+        <div class="mt-main">
+          <strong>Admit one</strong>
+          <span>Your next event is waiting</span>
+        </div>
+        <div class="mt-stub"><div class="barcode"></div></div>
+      </div>
+    </div>
+  </aside>
+
+  <section class="auth-panel">
+    <div class="auth-card">
+      <h1>Log in</h1>
+      <p class="sub">Choose the type of account you have.</p>
+
+      <!-- error / info message is shown here by js/pages/login.js -->
+      <div id="formMessage"></div>
+
+      <form id="loginForm" novalidate>
+        <div class="role-switch">
+          <input type="radio" name="role" id="role-student" value="student" checked>
+          <label for="role-student"><i class="bi bi-mortarboard"></i> Student</label>
+          <input type="radio" name="role" id="role-organiser" value="organiser">
+          <label for="role-organiser"><i class="bi bi-megaphone"></i> Organiser</label>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <div class="input-wrap">
+            <i class="bi bi-envelope"></i>
+            <input type="email" id="email" name="email" placeholder="you@college.edu" required autocomplete="email">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="input-wrap">
+            <i class="bi bi-lock"></i>
+            <input type="password" id="password" name="password" placeholder="Your password" required autocomplete="current-password">
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-block btn-lg" type="submit" id="submitBtn">Log in</button>
+      </form>
+
+      <p class="switch-link">New to Eventify? <a href="/register" id="registerLink">Create an account</a></p>
+
+      <div class="demo-box">
+        <span>Demo accounts (password: demo123)</span>
+        <div>
+          <button type="button" class="demo-fill" data-role="student" data-email="student@demo.com" data-password="demo123">Fill student</button>
+          <button type="button" class="demo-fill" data-role="organiser" data-email="organiser@demo.com" data-password="demo123">Fill organiser</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="/js/helpers.js"></script>
+<script src="/js/api.js"></script>
+<script src="/js/pages/login.js"></script>
+<script src="/js/layout.js"></script>
+</body>
+</html>

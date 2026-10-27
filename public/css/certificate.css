@@ -1,0 +1,133 @@
+/* =====================================================================
+   Certificate page.
+   The certificate is designed at A4 landscape size (1123 x 794 px)
+   so that it prints exactly on one page.
+   ===================================================================== */
+
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+.cert-body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 0 16px 48px;
+  background: #1a1d4a;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.07) 1.2px, transparent 1.6px);
+  background-size: 24px 24px;
+  font-family: 'Figtree', 'Segoe UI', sans-serif;
+  color: #1c1b2e;
+}
+
+/* ---------- toolbar (hidden when printing) ---------- */
+.cert-toolbar {
+  max-width: 1123px; margin: 0 auto; padding: 18px 0;
+  display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+  color: #d8dbff; font-size: 14px; font-weight: 500;
+}
+.cert-toolbar a { color: #ffd37a; font-weight: 700; }
+.cert-btn {
+  display: inline-flex; align-items: center; padding: 10px 20px; border-radius: 11px; border: 2px solid transparent;
+  background: #ff5b2e; color: #fff; font-family: inherit; font-weight: 700; font-size: 15px; cursor: pointer; text-decoration: none;
+  box-shadow: 0 3px 0 #c93a12;
+}
+.cert-btn:active { transform: translateY(2px); box-shadow: 0 1px 0 #c93a12; }
+.cert-btn-ghost { background: transparent; color: #fff; box-shadow: none; border-color: rgba(255, 255, 255, 0.35); }
+.cert-tip { flex: 1; text-align: center; min-width: 200px; }
+
+/* ---------- stage and sheet ---------- */
+.cert-stage { margin: 0 auto; width: 1123px; height: 794px; }
+.certificate {
+  --accent: #b8860b;        /* gold */
+  --accent-soft: #e9cf8a;
+  --accent-dark: #7a5a07;
+  width: 1123px; height: 794px; position: relative; transform-origin: top left;
+  background:
+    radial-gradient(circle at 50% 46%, #ffffff 0%, #fffdf6 55%, #f7f1de 100%);
+  padding: 26px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+.cert-participation {
+  --accent: #2b3cff;
+  --accent-soft: #aab2ff;
+  --accent-dark: #1623c9;
+  background: radial-gradient(circle at 50% 46%, #ffffff 0%, #f8f9ff 55%, #eceffd 100%);
+}
+
+/* double frame */
+.cert-frame { height: 100%; padding: 10px; border: 6px solid var(--accent); }
+.cert-inner {
+  position: relative; height: 100%; padding: 30px 70px 34px; text-align: center;
+  border: 2px solid var(--accent-soft);
+  display: flex; flex-direction: column; align-items: center; overflow: hidden;
+}
+
+/* corner ornaments */
+.cert-corner { position: absolute; width: 56px; height: 56px; border: 3px solid var(--accent); }
+.cert-corner::after { content: ''; position: absolute; width: 14px; height: 14px; background: var(--accent); transform: rotate(45deg); }
+.c-tl { top: 12px; left: 12px; border-right: 0; border-bottom: 0; }
+.c-tl::after { right: -7px; bottom: -7px; }
+.c-tr { top: 12px; right: 12px; border-left: 0; border-bottom: 0; }
+.c-tr::after { left: -7px; bottom: -7px; }
+.c-bl { bottom: 12px; left: 12px; border-right: 0; border-top: 0; }
+.c-bl::after { right: -7px; top: -7px; }
+.c-br { bottom: 12px; right: 12px; border-left: 0; border-top: 0; }
+.c-br::after { left: -7px; top: -7px; }
+
+.cert-watermark {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  font-size: 400px; line-height: 1; color: var(--accent); opacity: 0.06; pointer-events: none;
+  font-family: 'Playfair Display', serif;
+}
+
+/* ---------- content ---------- */
+.cert-top { position: relative; width: 100%; }
+.cert-issuer { font-family: 'Cinzel', serif; font-weight: 500; letter-spacing: 0.22em; font-size: 14px; color: var(--accent-dark); margin-bottom: 14px; text-transform: uppercase; }
+.cert-title { font-family: 'Cinzel', serif; font-weight: 700; font-size: 50px; line-height: 1.1; letter-spacing: 0.04em; margin: 0; color: #1c1b2e; }
+.cert-rank {
+  display: inline-block; margin-top: 14px; padding: 6px 26px; border-radius: 99px;
+  font-family: 'Cinzel', serif; font-weight: 700; font-size: 19px; letter-spacing: 0.1em; color: #1c1b2e;
+  background: linear-gradient(135deg, #ffe49a, #f5b83a);
+}
+.rank-2 { background: linear-gradient(135deg, #f0f2fa, #b5bdd6); }
+.rank-3 { background: linear-gradient(135deg, #f6c79b, #d9894b); }
+
+.cert-small { margin: 26px 0 0; font-family: 'Playfair Display', serif; font-style: italic; font-size: 19px; color: #5a5870; position: relative; }
+.cert-name {
+  position: relative; margin: 2px 0 0; padding: 0 40px 4px; font-family: 'Great Vibes', cursive; font-weight: 400; font-size: 88px; line-height: 1.15; color: var(--accent-dark);
+  border-bottom: 2px solid var(--accent-soft); min-width: 520px; max-width: 100%;
+}
+.cert-text { position: relative; margin: 20px 0 0; max-width: 780px; font-family: 'Playfair Display', serif; font-size: 20px; line-height: 1.65; color: #34324a; }
+.cert-text strong { color: #1c1b2e; font-weight: 600; }
+.cert-message { position: relative; margin: 12px 0 0; font-family: 'Playfair Display', serif; font-style: italic; font-size: 17px; color: #6b6984; }
+
+.cert-bottom {
+  position: relative; margin-top: auto; width: 100%;
+  display: grid; grid-template-columns: 1fr 150px 1fr; align-items: end;
+}
+.cert-meta { text-align: left; }
+.cert-meta span { display: block; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: #7d7b94; text-transform: uppercase; }
+.cert-meta strong { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 16px; color: #1c1b2e; }
+
+/* round seal */
+.cert-seal {
+  justify-self: center; width: 124px; height: 124px; display: grid; place-items: center; border-radius: 50%;
+  background:
+    radial-gradient(circle, var(--accent) 0 56%, transparent 57%),
+    repeating-conic-gradient(var(--accent-soft) 0 8deg, var(--accent) 8deg 16deg);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+.cert-seal span { font-family: 'Cinzel', serif; font-weight: 700; font-size: 44px; color: #fff; }
+
+.cert-sign { text-align: center; justify-self: end; width: 270px; }
+.cert-sign-name { font-family: 'Great Vibes', cursive; font-size: 40px; line-height: 1.1; color: #1c1b2e; padding-bottom: 2px; }
+.cert-sign-line { height: 2px; background: #1c1b2e; margin: 2px 0 6px; }
+.cert-sign-role { font-size: 14px; font-weight: 700; color: #4a4860; }
+
+/* ---------- print: exactly one A4 landscape page ---------- */
+@page { size: A4 landscape; margin: 0; }
+@media print {
+  .no-print { display: none !important; }
+  .cert-body { background: #fff; padding: 0; min-height: 0; }
+  .cert-stage { width: 297mm !important; height: 210mm !important; margin: 0; }
+  .certificate { transform: none !important; box-shadow: none; width: 297mm; height: 210mm; }
+}

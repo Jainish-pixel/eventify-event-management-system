@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My attendance | Eventify</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main>
+  <section class="page-head page-head-compact">
+    <div class="container">
+      <h1>My attendance</h1>
+      <p>Organisers mark attendance during or after the event. Pending means it has not been marked yet.</p>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="container">
+
+      <div class="attendance-top">
+        <div class="ring-card">
+          <div class="ring" id="ring" style="--p: 0">
+            <div class="ring-inner">
+              <b id="percentText">0%</b>
+              <span>attended</span>
+            </div>
+          </div>
+          <p id="ringText"></p>
+        </div>
+
+        <div class="stat-cards stat-cards-3">
+          <div class="stat-card stat-good"><i class="bi bi-check2-circle"></i><b id="statPresent">0</b><span>Present</span></div>
+          <div class="stat-card stat-bad"><i class="bi bi-x-circle"></i><b id="statAbsent">0</b><span>Absent</span></div>
+          <div class="stat-card"><i class="bi bi-hourglass-split"></i><b id="statPending">0</b><span>Pending</span></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h2>Event by event</h2></div>
+        <div id="attendanceBox"></div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="/js/helpers.js"></script>
+<script src="/js/api.js"></script>
+<script src="/js/components.js"></script>
+<script src="/js/pages/student-attendance.js"></script>
+<script src="/js/layout.js"></script>
+</body>
+</html>

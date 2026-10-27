@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campus events | Eventify</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1>Every campus event, one ticket away.</h1>
+        <p class="lead">Browse what is happening on campus, register in one click, show your ticket at the door and download your certificate when it is over.</p>
+
+        <form action="/events" method="get" class="hero-search">
+          <i class="bi bi-search"></i>
+          <input type="text" name="q" placeholder="Search by event, venue or topic" aria-label="Search events">
+          <button class="btn btn-accent" type="submit">Find events</button>
+        </form>
+
+        <div class="hero-actions">
+          <a href="/register?role=student" class="btn btn-primary">Join as a student</a>
+          <a href="/register?role=organiser" class="btn btn-outline">Host an event</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <!-- the big ticket is filled by js/pages/index.js -->
+        <div id="heroTicket"></div>
+        <div class="hero-note hero-note-1"><i class="bi bi-check-circle-fill"></i> Attendance marked</div>
+        <div class="hero-note hero-note-2"><i class="bi bi-award-fill"></i> Certificate ready</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NUMBERS ============ -->
+  <section class="stats-strip">
+    <div class="container stats-row">
+      <div class="stat"><b id="statEvents">0</b><span>events listed</span></div>
+      <div class="stat"><b id="statStudents">0</b><span>students joined</span></div>
+      <div class="stat"><b id="statRegistrations">0</b><span>registrations</span></div>
+      <div class="stat"><b id="statCertificates">0</b><span>certificates earned</span></div>
+    </div>
+  </section>
+
+  <!-- ============ CATEGORIES ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Pick what you enjoy</h2>
+        <p>Jump straight to the kind of event you like.</p>
+      </div>
+      <div class="cat-grid">
+        <a href="/events?show=all&category=Technical" class="cat-tile cat-technical">
+          <span class="cat-icon"><i class="bi bi-cpu"></i></span><strong>Technical</strong><span class="cat-emoji">💻</span>
+        </a>
+        <a href="/events?show=all&category=Hackathon" class="cat-tile cat-hackathon">
+          <span class="cat-icon"><i class="bi bi-lightning-charge"></i></span><strong>Hackathon</strong><span class="cat-emoji">⚡</span>
+        </a>
+        <a href="/events?show=all&category=Workshop" class="cat-tile cat-workshop">
+          <span class="cat-icon"><i class="bi bi-tools"></i></span><strong>Workshop</strong><span class="cat-emoji">🛠️</span>
+        </a>
+        <a href="/events?show=all&category=Cultural" class="cat-tile cat-cultural">
+          <span class="cat-icon"><i class="bi bi-music-note-beamed"></i></span><strong>Cultural</strong><span class="cat-emoji">🎭</span>
+        </a>
+        <a href="/events?show=all&category=Sports" class="cat-tile cat-sports">
+          <span class="cat-icon"><i class="bi bi-trophy"></i></span><strong>Sports</strong><span class="cat-emoji">🏏</span>
+        </a>
+        <a href="/events?show=all&category=Competition" class="cat-tile cat-competition">
+          <span class="cat-icon"><i class="bi bi-award"></i></span><strong>Competition</strong><span class="cat-emoji">🏆</span>
+        </a>
+        <a href="/events?show=all&category=Seminar" class="cat-tile cat-seminar">
+          <span class="cat-icon"><i class="bi bi-mic"></i></span><strong>Seminar</strong><span class="cat-emoji">🎤</span>
+        </a>
+        <a href="/events?show=all&category=Social" class="cat-tile cat-social">
+          <span class="cat-icon"><i class="bi bi-people"></i></span><strong>Social</strong><span class="cat-emoji">🤝</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ UPCOMING EVENTS ============ -->
+  <section class="section section-tint">
+    <div class="container">
+      <div class="section-head section-head-row">
+        <div>
+          <h2>Coming up soon</h2>
+          <p>Seats are limited, so register early.</p>
+        </div>
+        <a href="/events" class="btn btn-outline">See all events</a>
+      </div>
+
+      <!-- event cards are filled by js/pages/index.js -->
+      <div id="upcomingBox"></div>
+    </div>
+  </section>
+
+  <!-- ============ FOR STUDENTS / ORGANISERS ============ -->
+  <section class="section">
+    <div class="container two-col">
+      <div class="role-card role-card-student">
+        <h3>If you are a student</h3>
+        <ul class="check-list">
+          <li><i class="bi bi-check2"></i> Browse events by category and register in one click</li>
+          <li><i class="bi bi-check2"></i> Keep every ticket in one place and cancel any time before the event</li>
+          <li><i class="bi bi-check2"></i> See your attendance record for each event</li>
+          <li><i class="bi bi-check2"></i> Download participation and winner certificates</li>
+        </ul>
+        <a href="/register?role=student" class="btn btn-accent">Create a student account</a>
+      </div>
+
+      <div class="role-card role-card-organiser">
+        <h3>If you run events</h3>
+        <ul class="check-list">
+          <li><i class="bi bi-check2"></i> Publish an event with timing, venue, seats and an optional ticket price</li>
+          <li><i class="bi bi-check2"></i> Mark attendance from a simple checklist</li>
+          <li><i class="bi bi-check2"></i> Announce winners and let them download certificates</li>
+          <li><i class="bi bi-check2"></i> Export the attendee list to Excel</li>
+        </ul>
+        <a href="/register?role=organiser" class="btn btn-primary">Create an organiser account</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="/js/helpers.js"></script>
+<script src="/js/api.js"></script>
+<script src="/js/components.js"></script>
+<script src="/js/pages/index.js"></script>
+<script src="/js/layout.js"></script>
+</body>
+</html>

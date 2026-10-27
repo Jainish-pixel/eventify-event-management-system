@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Events | Eventify</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+</head>
+<body>
+<div id="site-header"></div>
+
+<main>
+  <section class="page-head">
+    <div class="container">
+      <h1>Find your next event</h1>
+      <p>Filter by category, search by name or venue, and switch between upcoming and past events.</p>
+
+      <form action="/events" method="get" class="search-box">
+        <i class="bi bi-search"></i>
+        <input type="text" name="q" id="searchInput" placeholder="Search events, venues or topics" aria-label="Search events">
+        <input type="hidden" name="category" id="categoryInput" value="all">
+        <input type="hidden" name="show" id="showInput" value="upcoming">
+        <button class="btn btn-primary" type="submit">Search</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="container">
+
+      <div class="filter-bar">
+        <div class="tabs" role="tablist" id="showTabs"></div>
+        <span class="result-count" id="resultCount"></span>
+      </div>
+
+      <div class="pill-row" id="categoryPills"></div>
+
+      <div id="eventsBox"></div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="/js/helpers.js"></script>
+<script src="/js/api.js"></script>
+<script src="/js/components.js"></script>
+<script src="/js/pages/events.js"></script>
+<script src="/js/layout.js"></script>
+</body>
+</html>
