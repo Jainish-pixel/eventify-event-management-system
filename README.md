@@ -126,21 +126,22 @@ event-management-system/
 
 ## Git Workflow
 
-This project uses Git for version control.
+Git is used for version control and tracking changes in the Eventify project.
 
 ### Branching Strategy
 - `main`: Contains the stable version of the project.
-- `docs/project-documentation`: Used for documentation updates.
+- `docs/project-documentation`: Used for documentation changes.
 
 ### Commit Message Convention
-- `feat`: New features.
-- `fix`: Bug fixes.
-- `docs`: Documentation changes.
-- `refactor`: Code improvements.
+- `feat`: Adding a new feature.
+- `fix`: Fixing a bug.
+- `docs`: Updating documentation.
+- `refactor`: Improving code without changing functionality.
 
-### Development Workflow
-1. Create a feature branch.
+### Pull Request Workflow
+1. Create a separate branch for each feature or documentation task.
 2. Make the required changes.
-3. Commit changes with meaningful messages.
+3. Commit changes with a meaningful message.
 4. Push the branch to GitHub.
 5. Create a Pull Request to merge changes into `main`.
+6. Review and merge the Pull Request.
