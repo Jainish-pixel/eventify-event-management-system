@@ -123,3 +123,24 @@ event-management-system/
 **16. Event delegation?** Buttons created by JS (Cancel, Delete) do not exist when the page loads, so we listen for clicks on `document` and check `event.target.closest('[data-cancel]')`.
 
 **17. Security points:** hashed passwords, session cookie, role guards, ownership checks, `esc()`, server-side validation. Improvements: CSRF tokens, rate limiting, secret key in `.env`.
+
+## Git Workflow
+
+This project uses Git for version control.
+
+### Branching Strategy
+- `main`: Contains the stable version of the project.
+- `docs/project-documentation`: Used for documentation updates.
+
+### Commit Message Convention
+- `feat`: New features.
+- `fix`: Bug fixes.
+- `docs`: Documentation changes.
+- `refactor`: Code improvements.
+
+### Development Workflow
+1. Create a feature branch.
+2. Make the required changes.
+3. Commit changes with meaningful messages.
+4. Push the branch to GitHub.
+5. Create a Pull Request to merge changes into `main`.
